@@ -23,8 +23,9 @@ A mini ML competition. WHo can produce the highest prediction accuracy of pass/f
 * Using the standard caret syntax fit your model and measure accuracy:
    `fit <- train(final_result~., data=TRAINING, method=YOUR MODEL, metric="accuracy", trControl=control)`
 * Generate a summary of your results and create a visualization of the accuracy scores for your ten trials
+* Make any tweaks to your model to try to improve its performance
 ### Model Testing
-* Use the `predict` function to test you model
+* Use the `predict` function to test your model
   `predictions <- predict(fit, TEST)`
 * Generate a confusion matrix for your model test
   `confusionMatrix(predictions, TEST$final_result)`
