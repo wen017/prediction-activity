@@ -20,14 +20,14 @@ A mini ML competition. Who can produce the best model to predict pass/fail
 * You will be allocated one of the following models to test:
 
 
-* Using the `trainControl` command in the `caret` package create a 10-fold cross-validation harness: 
+* Using the `trainControl` command in the `caret` package create a 10-fold cross-validation harness:   
   `control <- trainControl(method="cv", number=10)`
-* Using the standard caret syntax fit your model and measure accuracy:
+* Using the standard caret syntax fit your model and measure accuracy:  
    `fit <- train(final_result~., data=TRAINING, method=YOUR MODEL, metric="accuracy", trControl=control)`
 * Generate a summary of your results and create a visualization of the accuracy scores for your ten trials
 * Make any tweaks to your model to try to improve its performance
 ### Model Testing
-* Use the `predict` function to test your model
+* Use the `predict` function to test your model  
   `predictions <- predict(fit, TEST)`
-* Generate a confusion matrix for your model test
+* Generate a confusion matrix for your model test  
   `confusionMatrix(predictions, TEST$final_result)`
