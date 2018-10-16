@@ -16,7 +16,10 @@ A mini ML competition. Who can produce the best model to predict pass/fail
 * Ensure that the final_result variable is binary (Remove all students who withdrew from a courses and convert all students who recieved distinctions to pass)
 * Visualize the distributions of each of the variables for insight
 * Visualize relationships between variables for insight
-### Model Training 
+### Model Training
+* You will be allocated one of the following models to test:
+
+
 * Using the `trainControl` command in the `caret` package create a 10-fold cross-validation harness: 
   `control <- trainControl(method="cv", number=10)`
 * Using the standard caret syntax fit your model and measure accuracy:
