@@ -17,9 +17,10 @@ A mini-prediction competition. Who can produce the best model to predict pass/fa
 * Visualize the distributions of each of the variables for insight
 * Visualize relationships between variables for insight
 ### Model Training
+* Install the `caret` package
 * You will be allocated one of the following models to test:
 
-  CART, Naive Bayes, Logistic Regression
+  CART (`RPART`), Conditional Inference Trees (`party`), Naive Bayes (`naive_bayes`), Logistic Regression (`gpls`)
 
 * Using the `trainControl` command in the `caret` package create a 10-fold cross-validation harness:   
   `control <- trainControl(method="cv", number=10)`
