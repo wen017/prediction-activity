@@ -10,7 +10,7 @@ A mini-prediction competition. Who can produce the best model to predict pass/fa
 * Calculate the average assessment score for each student from the `studentAssessment` dataset
 * Merge your click and assessment score average values into the the `studentInfo` dataset
 ### Create a Validation Set
-* Split your data into two new datasets, `TRAINING` and `TEST`, by **randomly** selecting 20% of the students for the `TEST` set
+* Split your data into two new datasets, `TRAINING` and `TEST`, by **randomly** selecting 25% of the students for the `TEST` set
 ### Explore
 * Generate summary statistics for the variable `final_result`
 * Ensure that the final_result variable is binary (Remove all students who withdrew from a courses and convert all students who recieved distinctions to pass)
@@ -20,7 +20,7 @@ A mini-prediction competition. Who can produce the best model to predict pass/fa
 * Install the `caret` package
 * You will be allocated one of the following models to test:
 
-  CART (`RPART`), Conditional Inference Trees (`party`), Naive Bayes (`naive_bayes`), Logistic Regression (`gpls`)
+  CART (`RPART`), Conditional Inference Trees (`party`), Naive Bayes (`naivebayes`), Logistic Regression (`gpls`)
 
 * Using the `trainControl` command in the `caret` package create a 10-fold cross-validation harness:   
   `control <- trainControl(method="cv", number=10)`
