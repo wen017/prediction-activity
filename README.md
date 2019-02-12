@@ -1,6 +1,6 @@
 # Prediction Activity
 
-A mini ML competition. Who can produce the best model to predict pass/fail
+A mini-prediction competition. Who can produce the best model to predict pass/fail
 
 ### Download
 * Download the Open University Learning Analytics dataset from [here](https://analyse.kmi.open.ac.uk/open_dataset)
