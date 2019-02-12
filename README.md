@@ -1,4 +1,4 @@
-# Machine Learning Activity
+# Prediction Activity
 
 A mini ML competition. Who can produce the best model to predict pass/fail
 
