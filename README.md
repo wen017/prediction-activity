@@ -19,7 +19,7 @@ A mini ML competition. Who can produce the best model to predict pass/fail
 ### Model Training
 * You will be allocated one of the following models to test:
 
-  CART, Neural Network, [Genetic Algorithm](https://www.r-bloggers.com/feature-selection-with-carets-genetic-algorithm-option/), Naive Bayes, K-nearest neighbors 
+  CART, Naive Bayes, Logistic Regression
 
 * Using the `trainControl` command in the `caret` package create a 10-fold cross-validation harness:   
   `control <- trainControl(method="cv", number=10)`
