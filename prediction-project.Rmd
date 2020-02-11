@@ -1,0 +1,9 @@
+
+
+
+```{r}
+D1 <- read.csv("studentVle.csv")
+D2 <- read.csv("studentAssessment.csv")
+D3 <- read.csv("studentInfo.csv")
+
+```
