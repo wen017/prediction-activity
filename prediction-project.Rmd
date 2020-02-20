@@ -1,9 +1,22 @@
 
+```{r}
 
+library(caret)
+
+```
 
 ```{r}
 D1 <- read.csv("studentVle.csv")
 D2 <- read.csv("studentAssessment.csv")
 D3 <- read.csv("studentInfo.csv")
+
+```
+
+
+```{r}
+###### Wrangling
+#### Calculate the average daily number of clicks (site interactions) for each student from the `studentVle` dataset
+avg1 <- 
+
 
 ```
