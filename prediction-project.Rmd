@@ -2,6 +2,8 @@
 ```{r}
 
 library(caret)
+library(tidyr)
+library(dplyr)
 
 ```
 
@@ -16,7 +18,46 @@ D3 <- read.csv("studentInfo.csv")
 ```{r}
 ###### Wrangling
 #### Calculate the average daily number of clicks (site interactions) for each student from the `studentVle` dataset
-avg1 <- 
+avg1 <- select(D1, "id_student", "date", "sum_click")
+avg2 <- arrange(avg1, id_student)
+avg3 <- round(aggregate(avg2[,3], list(avg2$id_student), mean),2)
+###Calculate the average assessment score for each student from the `studentAssessment` dataset
+avg_score1 <- select(D2, "id_student","score")
+avg_score2 <- arrange(avg_score1, id_student)
+N_score <- round(aggregate(avg_score2[,2],list(avg_score2$id_student), mean),2)
+###Merge your click and assessment score average values into the the `studentInfo` dataset
+names(avg3) <- c("id","avg_click")
+new <- merge(D3, avg3, by.x = "id_student", by.y = "id")
+names(N_score) <- c("id", "avg_score")
+new <- merge(new, N_score, by.x="id_student", by.y = "id")
+```
 
+```{r}
+### Create a Validation Set
+### Split your data into two new datasets, `TRAINING` and `TEST`, by randomly** selecting 25% of the students for the `TEST` set
+library(caret)
+index <- createDataPartition(
+  y = new$final_result,
+  p=.75,
+  list = FALSE)
+train_set <- new[index,]
+test_set <- new[-index,]
+```
+
+
+
+
+```{r}
+### Explore
+### Generate summary statistics for the variable `final_result`
+### Ensure that the final_result variable is binary (Remove all students who withdrew from a courses and convert all students who recieved distinctions to pass)
+### Visualize the distributions of each of the variables for ### insightVisualize relationships between variables for insight
+table(new$final_result)
+anyNA(new$final_result)
+
+new <- new %>%
+  filter(final_result !="Withdrawn")
+new$final_result <- ifelse(new$final_result == "fail", "fail", "pass")
 
 ```
+
